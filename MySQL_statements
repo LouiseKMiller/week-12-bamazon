@@ -1,0 +1,23 @@
+CREATE DATABASE BamazonDB;
+use BamazonDB;
+create TABLE Products (
+id INTEGER(11) AUTO_INCREMENT NOT NULL,
+ProductName VARCHAR(100) NOT NULL,
+DepartmentName VARCHAR(100) NOT NULL,
+Price DECIMAL(5,2) NULL,
+StockQuantity INTEGER(10) NUll,
+PRIMARY KEY (id));
+
+INSERT INTO Products (ProductName, DepartmentName, Price, StockQuantity)
+VALUES ("blender", "Kitchen Goods", 28.99, 100),
+("towels", "Bed & Bath", 12.99, 200),
+("watch", "Jewelry", 48.89, 50),
+("sandals", "Shoes", 15.50, 75),
+("beach bag", "Handbags", 18.99, 50),
+("swimsuit", "Women", 45.99, 80),
+("camera", "Electronics", 99.99, 100),
+("hat", "Handbags", 15.99, 200),
+("sunscreen", "Cosmetics", 25.99, 300),
+("sunglasses", "Jewelry", 12.99, 350);
+
+select * from Products;
